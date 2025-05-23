@@ -2,6 +2,34 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 
+// app/layout.tsx or app/page.tsx (in TypeScript)
+
+export const metadata = {
+    title: "Andy Khau",
+    description: "Check my stuff out.",
+    openGraph: {
+        type: "website",
+        url: "https://andykhau.com/",
+        title: "Andy Khau",
+        description: "Check my stuff out.",
+        images: [
+            {
+                url: "/thumbnail.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Andy Khau",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Andy Khau",
+        description: "Check my stuff out.",
+        images: ["/thumbnail.jpg"],
+    },
+};
+
+
 export default function Home() {
     return (
         <main className={"bg-black min-h-screen"}>
