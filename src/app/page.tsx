@@ -48,6 +48,7 @@ export default function Home() {
                 <div className={'flex gap-10 '}>
                     <ProjectCard title={'Waddling Life'} image={'waddling.jpg'} link={'https://waddlinglife.com/'}/>
                     <ProjectCard title={"Google Sheets MCP"} image={'sheetsmcp.jpg'} link={'https://github.com/akchro/google-sheets-mcp'} />
+                    <ProjectCard title={'Eyesite'} image={'eyesite.jpg'} link={'https://eyesite.andykhau.com'} />
                 </div>
             </div>
             <Footer/>
