@@ -36,10 +36,11 @@ export default function Home() {
             <div className={"h-full flex justify-center items-center h-screen"}>
                 <div className={'flex flex-col'}>
                     <h1 className={'text-5xl'}>Andy Khau</h1>
-                    <div className={'flex justify-between'}>
+                    <div className={'flex justify-between text-gray-50'}>
                         <Link href={'https://github.com/akchro'}>Github</Link>
                         <Link href={'#projects'} scroll={true} >Projects</Link>
                         <Link href={'/resume.pdf'}>Resume</Link>
+                        <Link href={'https://blog.andykhau.com'}>Blog</Link>
                     </div>
                 </div>
             </div>
