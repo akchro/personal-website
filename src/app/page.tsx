@@ -37,10 +37,10 @@ export default function Home() {
                 <div className={'flex flex-col'}>
                     <h1 className={'text-5xl'}>Andy Khau</h1>
                     <div className={'flex justify-between text-gray-50'}>
-                        <Link href={'https://github.com/akchro'}>Github</Link>
-                        <Link href={'#projects'} scroll={true} >Projects</Link>
-                        <Link href={'/resume.pdf'}>Resume</Link>
-                        <Link href={'https://blog.andykhau.com'}>Blog</Link>
+                        <Link href={'https://github.com/akchro'} className={'hover:underline'}>Github</Link>
+                        <Link href={'#projects'} scroll={true} className={'hover:underline'} >Projects</Link>
+                        <Link href={'/resume.pdf'} className={'hover:underline'}>Resume</Link>
+                        <Link href={'https://blog.andykhau.com'} className={'hover:underline'}>Blog</Link>
                     </div>
                 </div>
             </div>
