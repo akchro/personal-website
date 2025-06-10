@@ -46,7 +46,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={'mx-20 mb-10 h-screen'} id={'projects'}>
+            <div className={'mx-20 mb-10 min-h-screen'} id={'projects'}>
                 <h2 className={'text-4xl text-center mb-20'}>Projects</h2>
                 <div className={'flex gap-10 flex-wrap'}>
                     <ProjectCard title={'Waddling Life'} image={'waddling.jpg'} link={'https://waddlinglife.com/'}/>
