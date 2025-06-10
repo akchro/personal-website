@@ -19,6 +19,7 @@ const ParticleFlowMaterial = shaderMaterial(
     uColorFast: new THREE.Color('#8A2BE2'), // Purple for fast
     uFadeNear: 0.0,
     uFadeFar: 0.0,
+    uGlobalAlpha: 1.0,
   },
   // Vertex Shader
   `
@@ -45,6 +46,7 @@ const ParticleFlowMaterial = shaderMaterial(
     uniform vec3 uColorFast;
     uniform float uFadeNear;
     uniform float uFadeFar;
+    uniform float uGlobalAlpha;
     varying float vLifetime;
     varying float vVelocity;
     varying float vDist;
@@ -70,7 +72,7 @@ const ParticleFlowMaterial = shaderMaterial(
       float glowFalloff = smoothstep(0.4, 0.0, distToCenter);
       vec3 finalColor = baseColor + baseColor * glowFalloff * 0.5; // 0.5 is glow intensity
       
-      gl_FragColor = vec4(finalColor, finalOpacity);
+      gl_FragColor = vec4(finalColor, finalOpacity * uGlobalAlpha);
     }
   `
 );
@@ -81,6 +83,7 @@ function SurfaceFlowParticles() {
   const pointsRef = useRef<THREE.Points>(null);
   // @ts-expect-error: Should just have no value
     const shaderRef = useRef<any>();
+  const isFadeInInitialized = useRef(false);
 
   // 1. Prepare sampler and BVH
   const { sampler, bvh } = useMemo(() => {
@@ -116,8 +119,20 @@ function SurfaceFlowParticles() {
 
   // 3. Animation loop
   useFrame((state, delta) => {
-    if (!pointsRef.current || !bvh || !sampler || !shaderRef.current) return;
+    if (!shaderRef.current) return;
 
+    if (!isFadeInInitialized.current) {
+        shaderRef.current.uniforms.uGlobalAlpha.value = 0.0;
+        isFadeInInitialized.current = true;
+    }
+
+    const alpha = shaderRef.current.uniforms.uGlobalAlpha;
+    if (alpha.value < 1.0) {
+        alpha.value = Math.min(1.0, alpha.value + delta * 0.5); // Fades in over ~2 seconds
+    }
+    
+    if (!pointsRef.current || !bvh || !sampler) return;
+    
     const posAttr = pointsRef.current.geometry.attributes.position;
     const lifetimeAttr = pointsRef.current.geometry.attributes.aLifetime;
     const velocityAttr = pointsRef.current.geometry.attributes.aVelocity;
