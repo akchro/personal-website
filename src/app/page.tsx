@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
+import ThreeBackground from "@/components/ThreeBackground";
 
 // app/layout.tsx or app/page.tsx (in TypeScript)
 
@@ -32,7 +33,8 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <main className={"bg-black min-h-screen"}>
+        <main className={"min-h-screen"}>
+            <ThreeBackground />
             <div className={"h-full flex justify-center items-center h-screen"}>
                 <div className={'flex flex-col'}>
                     <h1 className={'text-5xl'}>Andy Khau</h1>
