@@ -1,7 +1,14 @@
 import Image from 'next/image';
 import Link from "next/link";
+import React from "react";
 
-const ProjectCard = ({title, image, link}) => {
+type ProjectCardProps = {
+    title: string;
+    image: string;
+    link: string;
+};
+
+const ProjectCard: React.FC<ProjectCardProps> = ({title, image, link}) => {
     return (
         <div className="relative rounded-t-xl overflow-hidden h-56 w-72 cursor-pointer transition-transform hover:scale-[1.02]">
             <Link href={link}>
