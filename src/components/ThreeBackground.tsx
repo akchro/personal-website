@@ -78,7 +78,7 @@ extend({ ParticleFlowMaterial });
 function SurfaceFlowParticles() {
   const { scene } = useGLTF('/handscentered.glb');
   const pointsRef = useRef<THREE.Points>(null);
-  // @ts-ignore
+  // @ts-expect-error
     const shaderRef = useRef<any>();
 
   // 1. Prepare sampler and BVH
@@ -188,7 +188,7 @@ function SurfaceFlowParticles() {
         <bufferAttribute attach="attributes-aLifetime" args={[particleLifetimes, 2]} />
         <bufferAttribute attach="attributes-aVelocity" args={[particleVelocities, 1]} />
       </bufferGeometry>
-      {/* @ts-ignore */}
+      {/* @ts-expect-error */}
       <particleFlowMaterial
         ref={shaderRef}
         key={ParticleFlowMaterial.key}
