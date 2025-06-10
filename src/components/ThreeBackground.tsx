@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { useGLTF, shaderMaterial } from '@react-three/drei';
