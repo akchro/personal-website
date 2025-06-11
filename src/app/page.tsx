@@ -13,7 +13,7 @@ export const metadata = {
         description: "Check my stuff out.",
         images: [
             {
-                url: "/thumbnail.png",
+                url: "/thumbnail.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Andy Khau",
@@ -24,7 +24,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Andy Khau",
         description: "Check my stuff out.",
-        images: ["/thumbnail.png"],
+        images: ["/thumbnail.jpg"],
     },
 };
 
