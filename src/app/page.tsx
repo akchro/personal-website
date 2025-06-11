@@ -48,10 +48,11 @@ export default function Home() {
             </div>
             <div className={'mx-20 mb-10 min-h-screen'} id={'projects'}>
                 <h2 className={'text-4xl text-center mb-20'}>Projects</h2>
-                <div className={'flex gap-10 flex-wrap'}>
+                <div className={'flex gap-10 flex-wrap justify-center'}>
+                    <ProjectCard title={'Eyesite'} image={'eyesite.jpg'} link={'https://eyesite.andykhau.com'} />
                     <ProjectCard title={'Waddling Life'} image={'waddling.jpg'} link={'https://waddlinglife.com/'}/>
                     <ProjectCard title={"Google Sheets MCP"} image={'sheetsmcp.jpg'} link={'https://github.com/akchro/google-sheets-mcp'} />
-                    <ProjectCard title={'Eyesite'} image={'eyesite.jpg'} link={'https://eyesite.andykhau.com'} />
+                    <ProjectCard title={'Accountable'} image={'accountable.jpg'} link={'https://devpost.com/software/accountable-tnij3l'}/>
                 </div>
             </div>
             <Footer/>
