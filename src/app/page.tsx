@@ -3,8 +3,6 @@ import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/ThreeBackground";
 
-// app/layout.tsx or app/page.tsx (in TypeScript)
-
 export const metadata = {
     title: "Andy Khau",
     description: "Check my stuff out.",
