@@ -51,6 +51,12 @@ export default function Home() {
                         <Link href={'/resume.pdf'} className={'hover:underline'}>Resume</Link>
                         <Link href={'https://blog.andykhau.com'} className={'hover:underline'}>Blog</Link>
                     </div>
+                    <Link
+                        href={'/art'}
+                        className={'text-gray-50 opacity-0 hover:opacity-100 transition-opacity duration-300 text-center mt-2 text-sm hover:underline'}
+                    >
+                        experimental
+                    </Link>
                 </div>
             </div>
             <div className={'mx-20 mb-10 min-h-screen'} id={'projects'}>
