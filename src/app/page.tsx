@@ -52,10 +52,10 @@ export default function Home() {
                         <Link href={'https://blog.andykhau.com'} className={'hover:underline'}>Blog</Link>
                     </div>
                     <Link
-                        href={'/art'}
-                        className={'text-gray-50 opacity-0 hover:opacity-100 transition-opacity duration-300 text-center mt-2 text-sm hover:underline'}
+                        href={'/favs'}
+                        className={'text-gray-50 text-center mt-2 hover:underline'}
                     >
-                        experimental
+                        favs
                     </Link>
                 </div>
             </div>
