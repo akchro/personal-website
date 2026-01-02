@@ -1,4 +1,3 @@
-import AsciiAnimation from '@/components/AsciiAnimation';
 import Link from "next/link";
 
 export const metadata = {
